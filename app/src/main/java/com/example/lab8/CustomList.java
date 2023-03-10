@@ -68,7 +68,11 @@ public class CustomList extends ArrayAdapter<City> {
      * Return the boolean value
      */
     public boolean hasCity(City city){
-
+        for (City c : cities){
+            if (c.getCityName()==city.getCityName()){
+                return true;
+            }
+        }
         return false;
     }
 
