@@ -82,7 +82,12 @@ public class CustomList extends ArrayAdapter<City> {
      * This is a city to delete
      */
     public void delete(City city){
-
+        if (hasCity(city)){
+            cities.remove(city);
+        }
+        else{
+            throw new IllegalArgumentException("City not in list");
+        }
     }
 
 }

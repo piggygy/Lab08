@@ -56,7 +56,7 @@ public class CustomListTest {
         City city2 = new City("TT", "AA");
         list.addCity(city);
         list.delete(city);
-        Assert.assertEquals(1, list.getCount());
+        Assert.assertEquals(0, list.getCount());
         assertFalse(list.hasCity(city));
         assertThrows( IllegalArgumentException.class, () -> {
             list.delete(city2);});
